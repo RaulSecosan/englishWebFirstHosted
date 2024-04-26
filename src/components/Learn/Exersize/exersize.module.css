@@ -1,0 +1,49 @@
+.backgroundColor {
+  background-color: #711f1f;
+  width: 100%;
+  min-height: 100vh;
+}
+.backgroundCenter {
+  /* background-color: #711f1f; */
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.firstEyes {
+  margin-top: 20px;
+  margin-bottom: -120px;
+}
+.display {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button1 {
+  width: 250px;
+  height: 100px;
+  border-radius: 15px;
+  background-color: #fb7878;
+  color: #672828;
+  font-size: 30px;
+}
+
+.button {
+  width: 130px;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #fb7878;
+  color: #672828;
+  font-size: 30px;
+}
+
+.columnButton {
+  margin-top: 30px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 300px;
+}

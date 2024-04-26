@@ -5,6 +5,8 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Animals from './components/Animals';
 import Words from './components/Words';
 import Lista from './components/List';
+import Learn from './components/Learn/LearnHome';
+import Exersize from './components/Learn/Exersize/Exersize';
 function App() {
 
   return (
@@ -17,6 +19,8 @@ function App() {
               <Route path="/words"><Words /></Route>
               <Route path="/words"><Words /></Route>
               <Route path="/list"><Lista /></Route>
+              <Route path="/learn"><Learn /></Route>
+              <Route path="/exersize"><Exersize /></Route>
 
           </Switch>
       </Router>

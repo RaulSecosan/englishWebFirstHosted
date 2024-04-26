@@ -27,6 +27,7 @@ const SideMenu = ({color}) => {
                 <li onClick={toggleMenu}><Link to='/animals'>Animals</Link></li>
                 <li onClick={toggleMenu}><Link to='/words'>Just Words</Link></li>
                 <li onClick={toggleMenu}><Link to='/list'>Lista</Link></li>
+                <li onClick={toggleMenu}><Link to='/learn'>Learn</Link></li>
            
             </ul>  
         </div>
