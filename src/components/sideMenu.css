@@ -1,0 +1,84 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Începe ascuns */
+    width: 150px;
+    height: 100vh;
+    background-color: #513e3e;
+    transition: left 0.4s ease; /* Animatie pentru tranziția de la deschidere la închidere */
+  }
+  
+  .sidebar.open {
+    left: 0; /* Arată meniul când este deschis */
+    z-index: 1;
+  }
+  .list {
+    margin-top: 60px;
+  }
+  .red{
+    /* position: absolute; */
+    position: absolute;
+    z-index: 1000; 
+    background-color: #23080e61;    top: 10px;
+    left: 10px;
+    padding: 10px;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    color: wheat;
+  }
+  .menu-button {
+    position: absolute;
+    /* deocamdata numai asa merge butonul cand e setat pe absolute */
+    z-index: 1000; 
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #796666;
+    color: #23080e61;
+  }
+  .menuHome {
+    position: absolute;
+    /* deocamdata numai asa merge butonul cand e setat pe absolute */
+    z-index: 1000; 
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #dabf9ee5;
+    color: #23080e61;
+  }
+
+  .menu-buttonOpen {
+    background-color: #513e3e;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .list {
+    list-style: none;
+  }
+  
+  .list li {
+    text-decoration: none;
+    padding-top: 10px;
+  }
+  
+  .list li a {
+    text-decoration: none;
+    color: inherit; /* Ensures the link color inherits from its parent */
+    font-size: 20px;
+  }
+  
+  
+  

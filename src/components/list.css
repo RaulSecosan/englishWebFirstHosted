@@ -1,0 +1,85 @@
+.button2{
+    color: red;
+    margin-left: 20px;
+    background-color: #f3caca;
+    border-radius: 15px;
+}
+
+.words  {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.h1ClassList{
+    color: #f7d3d3;
+}
+/* 
+.words-background{
+    background-image: url("../assets/img/Background.png");  
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    background-position: 0px 0px;
+
+} */
+
+
+/* .list-container {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+.display2 {
+  position: relative;
+ /* flex-direction: column; */
+  margin: 10px;
+  width: 80%;
+  height: 50px;
+  border: dotted rgba(0, 0, 0, 0.395) 2px;
+  
+}
+
+.lis{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;;
+}
+
+.displayDown2 {
+    
+  position: absolute;
+  bottom: -3px;
+  width: 100%;
+  height: 53px;
+  border: solid black 1px;
+  font-size: 23px;
+  color: #f7d3d3;
+} 
+.displayDownValue3 {
+  position: relative;
+  bottom: 35px;
+  font-size: 18px;
+  color: #f8f8f8e6;
+}
+
+
+
+
+
+.input3{
+    /* Pentru a nu mostenii ce e mai sus, imi modifica dimensiunea */
+    all: initial;  
+    width: 90%;
+    height: 30px;
+    border: solid rgb(18, 50, 82) 2px;
+    border-radius: 10px;
+}
+.input3::placeholder {
+    color: #f3caca; /* Schimbă culoarea la ce dorești */
+    font-size: 20px;
+    padding: 15px;
+}

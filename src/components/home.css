@@ -1,0 +1,63 @@
+.App1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  /* Pentru a seta culoarea de functia e nevoie si de min-height */
+    background-color: bisque;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+.advice{
+  max-width: 300px;
+  max-height: 300px;
+  background-color: #c0a17cc6;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  color: #62411e;
+}
+
+.learn {
+  display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    /* padding: 30px; */
+    width: 100%;
+    margin-left: 20px;
+    
+}
+
+.learn::-webkit-scrollbar{
+  display: none;
+}
+
+
+.jobText{
+  position: relative;
+  top: -50px;
+  font-size: 30px;
+  color:rgb(223, 232, 227)
+}
+
+.wordText{
+  position: relative;
+  top: -50px;
+  font-size: 30px;
+  color:rgb(95, 12, 36)
+}
+
+.txt{
+  text-decoration: none;
+}
+
+.jobUp{
+  border: 1px solid rgb(42, 12, 12);
+  width: 151px;
+  height: 100px;
+  margin-right: 10px;
+  background-image: url("../assets/img/roadss.jpg");  
+  background-size: 270px;
+  background-position: -65px -76px;
+}
+
