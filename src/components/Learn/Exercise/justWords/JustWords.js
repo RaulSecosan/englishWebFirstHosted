@@ -3,20 +3,26 @@ import React, { useEffect, useState } from "react";
 import styles from "./justWords.module.css";
 import SideMenu from "../../../SideMenu";
 import { useBodyClass } from "../../../../Custom Hook/useBodyClass";
+import useFirestore from "../../../Display";
 
 export default function JustWords() {
   useBodyClass(styles["backgroundColor"]);
 
-  const words = [
-    { Engleza: "Word", Romana: "Cuvant" },
-    { Engleza: "Learn", Romana: "Invata" },
-  ];
-  const [word, setWord] = useState(words[0].Engleza);
+  // const words = [
+  //   { Engleza: "Word", Romana: "Cuvant" },
+  //   { Engleza: "Learn", Romana: "Invata" },
+  // ];
+  const words = useFirestore("words");
+  // const [word, setWord] = useState(jobs[0].name);
+  const [word, setWord] = useState("");
   const [click, setClick] = useState(true);
   const [index, setIndex] = useState(0);
 
+  console.log(words[1]);
+
   useEffect(() => {
-    setWord(click ? words[index].Engleza : words[index].Romana);
+    // setWord(click ? words[index].Engleza : words[index].Romana);
+    setWord(click ? words[index].name : words[index].value);
   }, [click, index]);
 
   function handleWord() {
@@ -54,9 +60,7 @@ export default function JustWords() {
             <button
               className={styles.button}
               onClick={() =>
-                index === words.length - 1
-                  ? setIndex(index - 1)
-                  : setIndex(index + 1)
+                index === words.length - 1 ? setIndex(0) : setIndex(index + 1)
               }
             >
               →
