@@ -1,30 +1,28 @@
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import Jobs from './components/Jobs';
-import Home from './components/Home';
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
-import Animals from './components/Animals';
-import Words from './components/Words';
-import Lista from './components/List';
-import Learn from './components/Learn/LearnHome';
-import Exersize from './components/Learn/Exersize/Exersize';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Jobs from "./components/Jobs";
+import Home from "./components/Home";
+import Animals from "./components/Animals";
+import Words from "./components/Words";
+import Lista from "./components/List";
+import Learn from "./components/Learn/LearnHome";
+import Exercise from "./components/Learn/Exercise/Exercise";
+import JustWords from "./components/Learn/Exercise/justWords/JustWords";
 function App() {
-
   return (
-    
-      <Router className="App">
-          <Switch>
-              <Route exact path='/'> <Home /> </Route>
-              <Route path="/jobs"><Jobs /></Route>
-              <Route path="/animals"><Animals /></Route>
-              <Route path="/words"><Words /></Route>
-              <Route path="/words"><Words /></Route>
-              <Route path="/list"><Lista /></Route>
-              <Route path="/learn"><Learn /></Route>
-              <Route path="/exersize"><Exersize /></Route>
-
-          </Switch>
-      </Router>
-    
+    <BrowserRouter className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/animals" element={<Animals />} />
+        <Route path="/words" element={<Words />} />
+        <Route path="/words" element={<Words />} />
+        <Route path="/list" element={<Lista />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/learn/exercise" element={<Exercise />} />
+        <Route path="/learn/exercise/words" element={<JustWords />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,9 +1,10 @@
 import React from "react";
 
-import styles from './learnHome.module.css';
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import styles from "./learnHome.module.css";
 import { useBodyClass } from "../../Custom Hook/useBodyClass";
 import SideMenu from "../SideMenu";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../Buttom/Button";
 
 export default function Learn() {
   // //Pentru a pune imaginea de fundal peste tot
@@ -15,11 +16,11 @@ export default function Learn() {
   //     document.body.classList.remove(styles['learn-home-page']);
   //   };
   // }, []);
-  useBodyClass(styles['learn-home-page']);
-
+  useBodyClass(styles["learn-home-page"]);
+  const navigate = useNavigate();
   return (
     <div className={styles.backgroundCenter}>
-    <SideMenu color='red'/>
+      <SideMenu color="red" />
       <div className={styles.column}>
         <img
           src={require("./images/firstEyes.png")}
@@ -28,9 +29,14 @@ export default function Learn() {
         />{" "}
         <div className={styles.display}>
           <div>
-            <Link to="/exersize">
-              <button  className={styles.button1}>Exersează</button>
-            </Link>
+
+          {/* <Button to="/exercise"  type='button1'>Exerseaza</Button> */}
+            <button
+              className={styles.button1}
+              onClick={() => navigate("/learn/exercise")}
+            >
+              Exersează
+            </button>
           </div>
           <div>
             <button className={styles.button1}>New Word</button>

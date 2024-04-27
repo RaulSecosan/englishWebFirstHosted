@@ -1,0 +1,52 @@
+.backgroundColor {
+  background-color: #711f1f;
+  width: 100%;
+  min-height: 100vh;
+}
+.backgroundCenter {
+  /* background-color: #711f1f; */
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.openEyes {
+  /* margin-top: 0px; */
+  margin-bottom: 50px;
+}
+.display {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #fb7878;
+  color: #672828;
+  font-size: 40px;
+  filter: drop-shadow(0 0 0.75rem rgb(134, 89, 89));
+}
+
+.button {
+  width: 130px;
+  height: 70px;
+  border-radius: 15px;
+  background-image: radial-gradient(circle, #E96161, #833636);
+  color: #672828;
+  font-size: 45px;
+
+  /* font-weight:800; */
+}
+
+.columnButton {
+  margin-top: 30px;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 300px;
+}
