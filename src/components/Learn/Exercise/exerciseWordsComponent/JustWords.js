@@ -4,16 +4,16 @@ import styles from "./justWords.module.css";
 import SideMenu from "../../../SideMenu";
 import { useBodyClass } from "../../../../Custom Hook/useBodyClass";
 import useFirestore from "../../../Display";
+import { useParams } from "react-router-dom";
 
 export default function JustWords() {
   useBodyClass(styles["backgroundColor"]);
 
-  // const words = [
-  //   { Engleza: "Word", Romana: "Cuvant" },
-  //   { Engleza: "Learn", Romana: "Invata" },
-  // ];
-  const words = useFirestore("words");
-  // const [word, setWord] = useState(jobs[0].name);
+ 
+  const { databaseSelected } = useParams();
+  // console.log(databaseSelected);
+
+  const words = useFirestore(databaseSelected);
   const [word, setWord] = useState("");
   const [click, setClick] = useState(true);
   const [index, setIndex] = useState(0);

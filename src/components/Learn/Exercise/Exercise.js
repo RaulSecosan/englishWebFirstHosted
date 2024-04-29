@@ -23,8 +23,12 @@ export default function Exercise() {
             <button className={styles.button1}>Just Words</button>
           </Link>
           <div className={styles.columnButton}>
-            <button className={styles.button}>Jobs</button>
-            <button className={styles.button}>Animals</button>
+            <Link to="/learn/exercise/jobs">
+              <button className={styles.button}>Jobs</button>
+            </Link>
+            <Link to="/learn/exercise/animals">
+              <button className={styles.button}>Animals</button>
+            </Link>
           </div>
         </div>
       </div>
