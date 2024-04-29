@@ -18,21 +18,32 @@ export default function JustWords() {
   const [click, setClick] = useState(true);
   const [index, setIndex] = useState(0);
 
-  console.log(words[1]);
-
   useEffect(() => {
     // setWord(click ? words[index].Engleza : words[index].Romana);
     setWord(click ? words[index].name : words[index].value);
-  }, [click, index]);
+  }, [click, index, words]);
 
   function handleWord() {
     setClick(!click);
     // click ? setWord(words[index].Romana) : setWord(words[index].Engleza);
   }
+  function right() {
+    index === words.length - 1 ? setIndex(0) : setIndex(index + 1);
 
-  console.log(index);
-  console.log(click);
-  console.log(words.length);
+    if (!click) return setClick(true);
+    console.log(click);
+  }
+
+  function left() {
+    if (index === 0) return 0;
+    else setIndex(index - 1);
+    if (!click) return setClick(true);
+    console.log(click);
+  }
+
+  // console.log(index);
+  // console.log(click);
+  // console.log(words.length);
   return (
     <div className={styles.backgroundCenter}>
       <SideMenu color={"red"} />
@@ -51,18 +62,10 @@ export default function JustWords() {
           </button>
 
           <div className={styles.columnButton}>
-            <button
-              className={styles.button}
-              onClick={() => (index === 0 ? 0 : setIndex(index - 1))}
-            >
+            <button className={styles.button} onClick={left}>
               ←
             </button>
-            <button
-              className={styles.button}
-              onClick={() =>
-                index === words.length - 1 ? setIndex(0) : setIndex(index + 1)
-              }
-            >
+            <button className={styles.button} onClick={right}>
               →
             </button>
           </div>

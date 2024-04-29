@@ -12,7 +12,7 @@ const SideMenu = ({color}) => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  console.log(color)
+  // console.log(color)
 
   return (
     <div>
