@@ -1,7 +1,7 @@
 .learn-home-page {
   width: 100%;
-  min-height: 100vh; 
-  background-color: #711f1f; 
+  min-height: 100vh;
+  background-color: #711f1f;
 }
 
 .backgroundCenter {
@@ -14,6 +14,7 @@
 
 .firstEyes {
   margin-bottom: -80px;
+  width: 100vw;
 }
 .display {
   display: flex;

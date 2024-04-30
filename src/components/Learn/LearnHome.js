@@ -4,7 +4,7 @@ import styles from "./learnHome.module.css";
 import { useBodyClass } from "../../Custom Hook/useBodyClass";
 import SideMenu from "../SideMenu";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "../Buttom/Button";
+// import Button from "../Buttom/Button";
 
 export default function Learn() {
   // //Pentru a pune imaginea de fundal peste tot
@@ -29,8 +29,7 @@ export default function Learn() {
         />{" "}
         <div className={styles.display}>
           <div>
-
-          {/* <Button to="/exercise"  type='button1'>Exerseaza</Button> */}
+            {/* <Button to="/exercise"  type='button1'>Exerseaza</Button> */}
             <button
               className={styles.button1}
               onClick={() => navigate("/learn/exercise")}
@@ -39,7 +38,12 @@ export default function Learn() {
             </button>
           </div>
           <div>
-            <button className={styles.button1}>New Word</button>
+            <button
+              className={styles.button1}
+              onClick={() => navigate("/learn/newWord")}
+            >
+              New Word
+            </button>
           </div>
         </div>
       </div>

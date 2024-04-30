@@ -8,6 +8,7 @@ import Lista from "./components/List";
 import Learn from "./components/Learn/LearnHome";
 import Exercise from "./components/Learn/Exercise/Exercise";
 import JustWords from "./components/Learn/Exercise/exerciseWordsComponent/JustWords";
+import NewWord from "./components/Learn/newWord/NewWord";
 function App() {
   return (
     <BrowserRouter className="App">
@@ -19,10 +20,13 @@ function App() {
         <Route path="/words" element={<Words />} />
         <Route path="/list" element={<Lista />} />
         <Route path="/learn" element={<Learn />} />
+        <Route path="/learn/newWord" element={<NewWord />} />
         <Route path="/learn/exercise" element={<Exercise />} />
         {/* <Route path="/learn/exercise/words" element={<JustWords database={'words'}/>} /> */}
-        <Route path="/learn/exercise/:databaseSelected" element={<JustWords />} />
-
+        <Route
+          path="/learn/exercise/:databaseSelected"
+          element={<JustWords />}
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -14,6 +14,7 @@
 .openEyes {
   /* margin-top: 0px; */
   margin-bottom: 50px;
+  width: 100vw;
 }
 .display {
   display: flex;
@@ -35,7 +36,7 @@
   width: 130px;
   height: 70px;
   border-radius: 15px;
-  background-image: radial-gradient(circle, #E96161, #833636);
+  background-image: radial-gradient(circle, #e96161, #833636);
   color: #672828;
   font-size: 45px;
 
