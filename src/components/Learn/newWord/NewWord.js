@@ -9,6 +9,7 @@ import {
 import styles from "./newWord.module.css";
 import { useBodyClass } from "../../../Custom Hook/useBodyClass";
 import SideMenu from "../../SideMenu";
+import HomeButton from "../HomeButton/HomeButton";
 
 export default function NewWord() {
   useBodyClass(styles["learn-home-page"]);
@@ -83,6 +84,7 @@ export default function NewWord() {
             </form>
           </div>
         </div>
+          <HomeButton />
       </div>
     </div>
   );

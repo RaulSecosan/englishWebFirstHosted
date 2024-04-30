@@ -5,11 +5,11 @@ import SideMenu from "../../../SideMenu";
 import { useBodyClass } from "../../../../Custom Hook/useBodyClass";
 import useFirestore from "../../../Display";
 import { useParams } from "react-router-dom";
+import HomeButton from "../../HomeButton/HomeButton";
 
 export default function JustWords() {
   useBodyClass(styles["backgroundColor"]);
 
- 
   const { databaseSelected } = useParams();
   // console.log(databaseSelected);
 
@@ -70,6 +70,7 @@ export default function JustWords() {
             </button>
           </div>
         </div>
+        <HomeButton />
       </div>
     </div>
   );
