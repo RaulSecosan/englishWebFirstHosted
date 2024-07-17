@@ -20,6 +20,7 @@
 
 .learn {
   display: flex;
+justify-content: center;
     overflow-y: hidden;
     overflow-x: scroll;
     /* padding: 30px; */

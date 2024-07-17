@@ -48,15 +48,7 @@ const Home = () => {
                 <img src={require('../assets/img/shoppingList.jpg')} alt="net" className="jobUp" />
                     <div className="jobText">Lista</div>
                 </Link> 
-             
-
-             
-
-             {/* <div className="animalsUp">
-                <div className="job">
-                    <Link to="/animals" className="jobText">Animals</Link> 
-                </div>
-             </div> */}
+        
             </div>
 
         </div>

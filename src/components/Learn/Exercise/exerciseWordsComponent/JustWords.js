@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import styles from "./justWords.module.css";
-import SideMenu from "../../../SideMenu";
 import { useBodyClass } from "../../../../Custom Hook/useBodyClass";
 import useFirestore from "../../../Display";
 import { useParams } from "react-router-dom";
@@ -46,7 +45,6 @@ export default function JustWords() {
   // console.log(words.length);
   return (
     <div className={styles.backgroundCenter}>
-      <SideMenu color={"red"} />
 
       <div className={styles.column}>
         <img

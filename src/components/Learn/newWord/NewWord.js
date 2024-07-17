@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import db from "../../../firebaseDb";
-import {
-  collection,
-  addDoc,
-  serverTimestamp,
-} from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 import styles from "./newWord.module.css";
 import { useBodyClass } from "../../../Custom Hook/useBodyClass";
-import SideMenu from "../../SideMenu";
 import HomeButton from "../HomeButton/HomeButton";
 
 export default function NewWord() {
@@ -36,7 +31,6 @@ export default function NewWord() {
   };
   return (
     <div className={styles.backgroundCenter}>
-      <SideMenu color="red" />
       <div className={styles.column}>
         <img
           src={require(".././images/add.png")}
@@ -44,47 +38,51 @@ export default function NewWord() {
           className={styles.dreamImage}
         />{" "}
         <div className={styles.display}>
-          <div className={styles.container}>
-            <form onSubmit={handleSubmit}>
-              {/* <Button to="/exercise"  type='button1'>Exerseaza</Button> */}
-              <div className={styles.containerCenter}>
-                <div>
-                  <select
-                    className={styles.button1}
-                    value={database}
-                    onChange={(e) => setDatabase(e.target.value)}
-                  >
-                    <option value="words">Just Words</option>
-                    <option value="jobs">Jobs</option>
-                    <option value="animals">Animals</option>
-                  </select>
-                  {/* <button className={styles.button1}>Just Word</button> */}
-                </div>
+          <div className={styles.containerPrincipal}>
+            <div className={styles.container}>
+              <form onSubmit={handleSubmit}>
+                {/* <Button to="/exercise"  type='button1'>Exerseaza</Button> */}
+                <div className={styles.containerCenter}>
+                  <div>
+                    <select
+                      className={styles.button1}
+                      value={database}
+                      onChange={(e) => setDatabase(e.target.value)}
+                    >
+                      <option value="words">Just Words</option>
+                      <option value="jobs">Jobs</option>
+                      <option value="animals">Animals</option>
+                    </select>
+                    {/* <button className={styles.button1}>Just Word</button> */}
+                  </div>
 
-                <div>
-                  <input
-                    className={styles.inputBox}
-                    placeholder="Cuvant în română"
-                    value={cuvantRomana}
-                    onChange={(e) => setCuvantRomana(e.target.value)}
-                  ></input>
+                  <div>
+                    <input
+                      className={styles.inputBox}
+                      placeholder="Cuvant în română"
+                      value={cuvantRomana}
+                      onChange={(e) => setCuvantRomana(e.target.value)}
+                    ></input>
+                  </div>
+                  <div>
+                    <input
+                      className={styles.inputBox}
+                      placeholder="Cuvant în engleză"
+                      value={cuvantEngleza}
+                      onChange={(e) => setCuvantEngleza(e.target.value)}
+                    ></input>
+                  </div>
+                  <div>
+                    <button className={styles.button3}>Add Word</button>
+                  </div>
                 </div>
-                <div>
-                  <input
-                    className={styles.inputBox}
-                    placeholder="Cuvant în engleză"
-                    value={cuvantEngleza}
-                    onChange={(e) => setCuvantEngleza(e.target.value)}
-                  ></input>
-                </div>
-                <div>
-                  <button className={styles.button3}>Add Word</button>
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
+            <div className={styles.lastButton}>
+              <HomeButton />
+            </div>
           </div>
         </div>
-          <HomeButton />
       </div>
     </div>
   );

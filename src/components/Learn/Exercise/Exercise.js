@@ -1,16 +1,15 @@
 import React from "react";
 
 import styles from "./exercise.module.css";
-import SideMenu from "../../SideMenu";
 import { useBodyClass } from "../../../Custom Hook/useBodyClass";
 import { Link } from "react-router-dom";
+import HomeButton from "../HomeButton/HomeButton";
 
 export default function Exercise() {
   useBodyClass(styles["backgroundColor"]);
 
   return (
     <div className={styles.backgroundCenter}>
-      <SideMenu color={"red"} />
 
       <div className={styles.column}>
         <img
@@ -31,6 +30,7 @@ export default function Exercise() {
             </Link>
           </div>
         </div>
+        <HomeButton />
       </div>
     </div>
   );
