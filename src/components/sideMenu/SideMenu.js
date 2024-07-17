@@ -3,7 +3,7 @@ import './sideMenu.css';
 import {  Link } from 'react-router-dom';
 
  // Stilurile tale CSS pentru meniu
-import MenuButton from './MenuButton'; // Componenta butonului de meniu
+import MenuButton from '../MenuButton'; // Componenta butonului de meniu
 
 const SideMenu = ({color}) => {
   const [isOpen, setIsOpen] = useState(false); // Starea pentru a ține evidența dacă meniul este deschis sau nu

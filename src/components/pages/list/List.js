@@ -1,9 +1,10 @@
 import './list.css';
 import {  useState } from 'react';
-import useFirestore from './Display';
-import { handleNew, handleDelete } from './util';
-import SearchBar from './SearchBar';
-import SideMenu from './SideMenu';
+import { handleNew, handleDelete } from '../../util';
+import useFirestore from '../display/Display';
+import SearchBar from '../../SearchBar'
+import SideMenu from '../../sideMenu/SideMenu';
+
 
 const Lista = () => {
 

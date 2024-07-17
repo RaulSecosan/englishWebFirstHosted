@@ -1,10 +1,10 @@
 import './animals.css';
 
 import {  useState } from 'react';
-import useFirestore from './Display';
-import { handleNew } from './util';
-import SearchBar from './SearchBar';
-import SideMenu from './SideMenu';
+import useFirestore from '../display/Display';
+import { handleNew } from '../../util';
+import SearchBar from '../../SearchBar'
+import SideMenu from '../../sideMenu/SideMenu';
 
 const Animals = () => {
 

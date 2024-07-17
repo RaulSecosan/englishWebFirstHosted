@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Jobs from "./components/Jobs";
-import Home from "./components/Home";
-import Animals from "./components/Animals";
-import Words from "./components/Words";
-import Lista from "./components/List";
+import Jobs from "./components/pages/jobs/Jobs";
+import Home from "./components/pages/home/Home";
+import Animals from "./components/pages/animals/Animals";
+import Words from "./components/pages/words/Words";
+import Lista from "./components/pages/list/List";
 import Learn from "./components/Learn/LearnHome";
 import Exercise from "./components/Learn/Exercise/Exercise";
 import JustWords from "./components/Learn/Exercise/exerciseWordsComponent/JustWords";

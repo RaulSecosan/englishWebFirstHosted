@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import SideMenu from './SideMenu';
+import SideMenu from '../../sideMenu/SideMenu';
 import './home.css';
 import { Link } from 'react-router-dom';
 
@@ -30,22 +30,22 @@ const Home = () => {
             <div className="learn">
              
                 <Link to="/jobs" className='txt'>
-                    <img src={require('../assets/img/jobss.jpg')} alt="net" className="jobUp" />
+                    <img src={require('../../../assets/img/jobss.jpg')} alt="net" className="jobUp" />
                     <div className="jobText">Jobs</div>
                 </Link> 
                 
                 <Link to="/animals" className='txt' >
-                    <img src={require('../assets/img/animals.jpg')} alt="net" className="jobUp" />
+                    <img src={require('../../../assets/img/animals.jpg')} alt="net" className="jobUp" />
                     <div className="jobText">Animals</div>
                 </Link>
 
                 <Link to="/words" className='txt' >
-                    <img src={require('../assets/img/word.jpg')} alt="net" className="jobUp" />
+                    <img src={require('../../../assets/img/word.jpg')} alt="net" className="jobUp" />
                     <div className="wordText">Words</div>
                 </Link> 
 
                 <Link to="/list" className='txt'>
-                <img src={require('../assets/img/shoppingList.jpg')} alt="net" className="jobUp" />
+                <img src={require('../../../assets/img/shoppingList.jpg')} alt="net" className="jobUp" />
                     <div className="jobText">Lista</div>
                 </Link> 
         

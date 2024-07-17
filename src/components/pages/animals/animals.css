@@ -1,11 +1,19 @@
-body{
-    background-color: #2a030b58;
-}
 
+.animals-background{
+    background-image: url("../../../assets/img/textureSleaves.jpg");  
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+.h1Class{
+    color: white;
+    opacity: 0.8;
+}
 .App {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    
   }
   .jobs-container {
     display: flex;
@@ -13,59 +21,60 @@ body{
     justify-content: center;
   }
 
-.button {
+.button1 {
     font-size: 20px;
     position: fixed;
     right: 30px;
     bottom: 50px;
     background-color: #23080e61;
+    color: wheat;
 }
 
-.display {
+.display1 {
     position: relative;
     display: inline-block;
     margin: 10px;
     width: 150px;
     height: 160px;
-    border: solid black 2px;
+    border: solid rgba(0, 0, 0, 0.395) 2px;
 }
 
 
 
- .displayDown {
+ .displayDown1 {
     position: absolute;
     bottom: -3px;
     width: 100%;
     height: 48px;
     border: solid black 1px;
-    font-size: 20px;
+    font-size: 23px;
+    color: #f7d3d3;
 } 
-
-.displayDownValue{
-    
-    font-size: 15px;
+.displayDownValue1 {
+    font-size: 18px;
+    color: #f8f8f8e6;
 }
+
+
 
 .displayUp {
     /* object-fit: contain; */
     width: 150px;
     height: 114px;  
-    background-image: url("../assets/img/roadss.jpg");  
-    background-size: 200px; 
-    background-position: -23px -30px;
+    background-image: url("../../../assets/img/roadss.jpg");  
+    background-size: 280px;
+    background-position: -70px -70px;
 }
-.input{
+.input1{
     /* Pentru a nu mostenii ce e mai sus, imi modifica dimensiunea */
     all: initial;  
     width: 90%;
     height: 30px;
-    border: solid rgb(85, 12, 12) 2px;
+    border: solid rgb(25, 176, 105) 2px;
     border-radius: 10px;
-   
 }
-
-.input::placeholder {
-    color: #0e0101c4; /* Schimbă culoarea la ce dorești */
+.input1::placeholder {
+    color: #f2e2e2; /* Schimbă culoarea la ce dorești */
     font-size: 20px;
     padding: 15px;
 }

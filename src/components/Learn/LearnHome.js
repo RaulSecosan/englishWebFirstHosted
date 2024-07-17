@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./learnHome.module.css";
 import { useBodyClass } from "../../Custom Hook/useBodyClass";
-import SideMenu from "../SideMenu";
+import SideMenu from "../sideMenu/SideMenu";
 import { Link, useNavigate } from "react-router-dom";
 // import Button from "../Buttom/Button";
 

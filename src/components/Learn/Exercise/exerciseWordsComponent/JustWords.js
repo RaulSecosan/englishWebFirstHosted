@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./justWords.module.css";
 import { useBodyClass } from "../../../../Custom Hook/useBodyClass";
-import useFirestore from "../../../Display";
+import useFirestore from "../../../pages/display/Display";
 import { useParams } from "react-router-dom";
 import HomeButton from "../../HomeButton/HomeButton";
 

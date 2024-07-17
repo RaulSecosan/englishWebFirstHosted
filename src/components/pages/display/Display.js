@@ -1,7 +1,7 @@
 // hooks/useFirestore.js
 import { useEffect, useState } from 'react';
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
-import db from '../firebaseDb';
+import db from '../../../firebaseDb';
 
 const useFirestore = (collectionName) => {
     const [documents, setDocuments] = useState([{name: "Loading...", id: "initial", img:'Loading...'}]);

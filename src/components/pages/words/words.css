@@ -9,7 +9,7 @@
 }
 
 .words-background{
-    background-image: url("../assets/img/Background.png");  
+    background-image: url("../../../assets/img/Background.png");  
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
