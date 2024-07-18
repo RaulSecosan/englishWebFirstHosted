@@ -1,9 +1,10 @@
 import React from 'react';
 // import './sideMenu.css';
 
-const MenuButton = ({ isOpen, toggleMenu, color }) => {
+const MenuButton = ({ isOpen, toggleMenu, color, buttonColorOpen }) => {
   return (
-    <button className={color} onClick={toggleMenu}>
+    // <button className={ !isOpen ? color : buttonColorOpen } onClick={toggleMenu}>
+    <button   className={isOpen ? (buttonColorOpen || color) : color} onClick={toggleMenu}>
       {isOpen ? 'Close' : 'Open'}
     </button>
   );

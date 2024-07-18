@@ -49,10 +49,14 @@
     border: solid black 1px;
     font-size: 23px;
     color: #f7d3d3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adaugă o umbră pentru text */
+
 } 
 .displayDownValue1 {
     font-size: 18px;
     color: #f8f8f8e6;
+    text-shadow: 2px 2px 4px rgb(138, 22, 22); /* Adaugă o umbră pentru text */
+
 }
 
 

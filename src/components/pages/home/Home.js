@@ -22,7 +22,7 @@ const Home = () => {
     },[])
     return (  
         <div className="App1">
-         <SideMenu color={'menuHome'}/>
+         <SideMenu color={'menuHome'} buttonColorOpen={'menuHomeOpen'}/>
             <h1>Homee</h1>
             <div className="advice">{advice}</div>
             <h2>Invata despre: </h2>

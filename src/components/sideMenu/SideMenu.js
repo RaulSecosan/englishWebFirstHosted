@@ -5,7 +5,7 @@ import {  Link } from 'react-router-dom';
  // Stilurile tale CSS pentru meniu
 import MenuButton from '../MenuButton'; // Componenta butonului de meniu
 
-const SideMenu = ({color}) => {
+const SideMenu = ({color,buttonColorOpen}) => {
   const [isOpen, setIsOpen] = useState(false); // Starea pentru a ține evidența dacă meniul este deschis sau nu
 
   // Funcție pentru a deschide sau închide meniul
@@ -17,9 +17,9 @@ const SideMenu = ({color}) => {
   return (
     <div>
     {/* color={'menu-button'} */}
-    <MenuButton color={color} isOpen={isOpen} toggleMenu={toggleMenu} />
+    <MenuButton color={color} buttonColorOpen={buttonColorOpen} isOpen={isOpen} toggleMenu={toggleMenu} />
         <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <MenuButton color={'menu-buttonOpen'} isOpen={isOpen} toggleMenu={toggleMenu} />
+        {/* <MenuButton color={'menu-buttonOpen'} isOpen={isOpen} toggleMenu={toggleMenu} /> */}
         
             <ul className="list" >
                 <li onClick={toggleMenu}><Link to='/'>Home</Link></li>
