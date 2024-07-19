@@ -1,0 +1,52 @@
+html{
+    background-color: rgb(207, 125, 125);
+}
+
+.bodyy{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Asigură că înălțimea containerului ocupă întregul viewport */
+    align-items: center;
+}
+.title {
+    color: rgb(159, 21, 21);
+}
+
+.paragraph {
+    font-size: 50px;
+}
+.envelope {
+    display: flex;
+    flex-direction: row;
+}
+
+.envelopeLeft, .envelopeRight{
+    position: relative;
+    /* border: 1px red solid; */
+    width: 500px;
+    height: 400px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+
+.leftEnv, .leftEnvHeart, .rightEnvHeart{
+    position: absolute;
+    font-size: large;
+    font-weight: bold;
+}
+.leftEnvHeart, .rightEnvHeart{
+    font-size: 100px;
+}
+
+.rightEnv{
+    position: absolute;
+    font-size: large;
+    font-weight: bold;
+    width: 300px;
+    text-align: center;
+}

@@ -7,7 +7,7 @@ import SideMenu from '../../sideMenu/SideMenu';
 
 const Words = () => {
 
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState('x');
     const [displayValueId, setDisplayValueId] = useState(null);
 
     const words = useFirestore('words')

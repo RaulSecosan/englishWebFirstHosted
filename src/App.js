@@ -9,6 +9,7 @@ import Learn from "./components/Learn/LearnHome";
 import Exercise from "./components/Learn/Exercise/Exercise";
 import JustWords from "./components/Learn/Exercise/exerciseWordsComponent/JustWords";
 import NewWord from "./components/Learn/newWord/NewWord";
+import Present from "./components/pages/present/Present";
 function App() {
   return (
     <BrowserRouter className="App">
@@ -26,6 +27,10 @@ function App() {
         <Route
           path="/learn/exercise/:databaseSelected"
           element={<JustWords />}
+        />
+        <Route
+          path="/presentForIub"
+          element={<Present />}
         />
       </Routes>
     </BrowserRouter>
