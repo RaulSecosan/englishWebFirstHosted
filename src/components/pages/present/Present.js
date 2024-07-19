@@ -3,24 +3,39 @@ import React, { useState } from 'react';
 
 export default function Present() {
     const [leftClick, setLeftClick] = useState(false)
+    const [coutLeft, setCoutLeft] = useState(0)
     const [rightClick, setRightClick] = useState(false)
+    const [animateLeft, setAnimateLeft] = useState(false);
+    const [animateLeftOne, setAnimateLeftOne] = useState(false);
+    const [animateRight, setAnimateRight] = useState(false);
+
+    // function handleLeftEnvelope (){
+    //     setLeftClick(!leftClick);
+    //     rightClick ? setRightClick(false) : setLeftClick(!leftClick);
+    // };
+    // function handleRightEnvelope (){
+    //     setRightClick(!rightClick);
+    //     leftClick ? setLeftClick(false) : setRightClick(!rightClick);
+    // };
+
     function handleLeftEnvelope (){
-        setLeftClick(!leftClick);
+        setAnimateLeft(true);
+        setCoutLeft(coutLeft+1);
+        if(coutLeft > 0){
+            setAnimateLeftOne(true);
+         setLeftClick(!leftClick);
         rightClick ? setRightClick(false) : setLeftClick(!leftClick);
+        }
+console.log(coutLeft);
     };
     function handleRightEnvelope (){
-        setRightClick(!rightClick);
-        leftClick ? setLeftClick(false) : setRightClick(!rightClick);
-
+        setAnimateRight(true);
     };
-    // function closeMessage (){
-    //     rightClick ? setRightClick(false) : setLeftClick(false);
-    //     leftClick ? setLeftClick(false) : setRightClick(false);
-    // };
+  
  
   return (
     
-    <div className={styles.bodyy} >
+    <div className={styles.bodyy}>
          <h1 className={styles.title}>Present ❤️❤️</h1>
 
        
@@ -29,7 +44,11 @@ export default function Present() {
         <div className={styles.envelope}>
             <div className={styles.envelopeLeft} onClick={handleLeftEnvelope}>
                 <img src={require('../../../assets/img//present/envelope.png')} alt="net" className="nav_logo"  />
-                {leftClick ?  <div className={styles.leftEnv}>Mâine 20 iulie 2024 mergem la Amazonia!</div> : <div  className={styles.leftEnvHeart}>❤️</div>}
+                {/* {leftClick ?  <div className={styles.leftEnv}>Mâine 20 iulie 2024 mergem la Amazonia!</div> : <div  className={styles.leftEnvHeart}>❤️</div>} */}
+             
+                {leftClick?  <div className={styles.leftEnv}>Mâine 20 iulie 2024 mergem la Amazonia!</div> : <div className={`${styles.leftEnvHeart} ${animateLeft ? styles.leftEnvHeartAnimated : ''}`}>❤️</div>}
+                    
+                    
             </div>
 
             <div className={styles.envelopeRight} onClick={handleRightEnvelope}>

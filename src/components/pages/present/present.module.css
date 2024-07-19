@@ -5,7 +5,7 @@ html{
 .bodyy{
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Asigură că înălțimea containerului ocupă întregul viewport */
+    height: 100vh; 
     align-items: center;
 }
 .title {
@@ -22,7 +22,6 @@ html{
 
 .envelopeLeft, .envelopeRight{
     position: relative;
-    /* border: 1px red solid; */
     width: 500px;
     height: 400px;
     padding: 0px;
@@ -43,6 +42,13 @@ html{
     font-size: 100px;
 }
 
+.leftEnvHeartAnimated{
+    z-index: 100;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;  
+}
+
 .rightEnv{
     position: absolute;
     font-size: large;
@@ -50,3 +56,17 @@ html{
     width: 300px;
     text-align: center;
 }
+
+/* @keyframes example {
+    0%  {left:200px; }
+    50% {left:450px; }
+    100% {scale: 5; left:450px; }
+  }  */
+  @keyframes example {
+    0%  {left:200px; }
+    25% {left:450px; }
+    50% {scale: 5; left:450px; }
+    100% {scale: 5; left:450px; transform: rotateY(90deg);}
+  } 
+
+  
