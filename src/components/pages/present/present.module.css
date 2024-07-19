@@ -15,6 +15,7 @@ html{
 .paragraph {
     font-size: 50px;
 }
+
 .envelope {
     display: flex;
     flex-direction: row;
@@ -45,6 +46,15 @@ html{
 .leftEnvHeartAnimated{
     z-index: 100;
     animation-name: example;
+    animation-duration:2s;
+    /* animation-fill-mode: forwards;   */
+}
+
+.paragraphAnimation {
+    position: absolute;
+    font-size: large;
+    font-weight: bold;
+    animation-name: title;
     animation-duration: 2s;
     animation-fill-mode: forwards;  
 }
@@ -57,11 +67,7 @@ html{
     text-align: center;
 }
 
-/* @keyframes example {
-    0%  {left:200px; }
-    50% {left:450px; }
-    100% {scale: 5; left:450px; }
-  }  */
+
   @keyframes example {
     0%  {left:200px; }
     25% {left:450px; }
@@ -69,4 +75,8 @@ html{
     100% {scale: 5; left:450px; transform: rotateY(90deg);}
   } 
 
+  @keyframes title {
+    0% {scale: 5; left:450px; }
+    100% {scale: 5; left:450px; animation-timing-function: ease-in; transform: rotateY(-90deg); }
+  } 
   
