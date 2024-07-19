@@ -1,12 +1,10 @@
-html{
-    background-color: rgb(207, 125, 125);
-}
-
 .bodyy{
     display: flex;
     flex-direction: column;
     height: 100vh; 
     align-items: center;
+    background-color: rgb(207, 125, 125);
+
 }
 .title {
     color: rgb(159, 21, 21);
@@ -21,7 +19,7 @@ html{
     flex-direction: row;
 }
 
-.envelopeLeft, .envelopeRight{
+.envelopeLeft{
     position: relative;
     width: 500px;
     height: 400px;
@@ -30,33 +28,32 @@ html{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
+    animation-name: env;
+    animation-duration:5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
 }
 
-
-.leftEnv, .leftEnvHeart, .rightEnvHeart{
+.envelopeRight{
+    position: relative;
+    width: 500px;
+    height: 400px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation-name: envR;
+    animation-duration:5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+}
+.leftEnv{
     position: absolute;
     font-size: large;
     font-weight: bold;
-}
-.leftEnvHeart, .rightEnvHeart{
-    font-size: 100px;
-}
-
-.leftEnvHeartAnimated{
-    z-index: 100;
-    animation-name: example;
-    animation-duration:2s;
-    /* animation-fill-mode: forwards;   */
-}
-
-.paragraphAnimation {
-    position: absolute;
-    font-size: large;
-    font-weight: bold;
-    animation-name: title;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;  
+    color: brown;
+    text-align: center;
 }
 
 .rightEnv{
@@ -66,17 +63,31 @@ html{
     width: 300px;
     text-align: center;
 }
-
+.leftEnvHeart, .rightEnvHeart{
+    position: absolute;
+    font-size: large;
+    font-weight: bold;
+    font-size: 100px;
+    z-index: 100;
+    animation-name: example;
+    animation-duration:7s;
+    animation-iteration-count:infinite;
+}
 
   @keyframes example {
-    0%  {left:200px; }
-    25% {left:450px; }
-    50% {scale: 5; left:450px; }
-    100% {scale: 5; left:450px; transform: rotateY(90deg);}
+    0% { transform: rotateY( 60deg); }
+  20% { transform: rotateY( 120deg); }
+  25% { transform: rotateZ( -120deg); }
+  40% { transform: rotateY( 180deg); }
+  45% { transform: rotateZ( 120deg); }
+  60% { transform: rotateY( 240deg); }
+  80% { transform: rotateY( 300deg); }
+  85% { transform: rotateZ( 120deg); }
+  100% { transform: rotateY( 360deg); }
   } 
-
-  @keyframes title {
-    0% {scale: 5; left:450px; }
-    100% {scale: 5; left:450px; animation-timing-function: ease-in; transform: rotateY(-90deg); }
+  @keyframes env {
+    50% { transform: rotatez( 5deg); }
   } 
-  
+  @keyframes envR {
+    50% { transform: rotatez( -5deg); }
+  } 
