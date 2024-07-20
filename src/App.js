@@ -10,6 +10,7 @@ import Exercise from "./components/Learn/Exercise/Exercise";
 import JustWords from "./components/Learn/Exercise/exerciseWordsComponent/JustWords";
 import NewWord from "./components/Learn/newWord/NewWord";
 import Present from "./components/pages/present/Present";
+import SomeMath from "./components/pages/someMath/SomeMath";
 function App() {
   return (
     <BrowserRouter className="App">
@@ -31,6 +32,10 @@ function App() {
         <Route
           path="/presentForIub"
           element={<Present />}
+        />
+        <Route
+          path="/someMath"
+          element={<SomeMath />}
         />
       </Routes>
     </BrowserRouter>

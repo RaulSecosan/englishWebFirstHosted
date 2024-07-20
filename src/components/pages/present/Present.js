@@ -13,10 +13,7 @@ export default function Present() {
         leftClick ? setLeftClick(false) : setRightClick(!rightClick);
 
     };
-    // function closeMessage (){
-    //     rightClick ? setRightClick(false) : setLeftClick(false);
-    //     leftClick ? setLeftClick(false) : setRightClick(false);
-    // };
+   
 
   return (
 
