@@ -9,13 +9,13 @@ const Home = () => {
     // Aducere date API
     async function getAdvice(){
         // fetch data
-        const res = await fetch("	https://api.adviceslip.com/advice");
+        const res = await fetch("https://api.adviceslip.com/advice");
         // convertire json pentru a fi citibile
         const data = await res.json();
         // adaugare in variabila pentru a fi folosite
         setAdvice(data.slip.advice);
     }
-
+    
     // pentru a afisa un sfat la fiecare accesare a paginii
     useEffect(function(){
         getAdvice();

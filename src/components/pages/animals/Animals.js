@@ -12,7 +12,8 @@ const Animals = () => {
     const [displayValueId, setDisplayValueId] = useState(null);
 
     const animals = useFirestore('animals')
-  
+    console.log(animals);
+
     const handleInputChange = (value) => {
          setInput(value);
         };
@@ -24,9 +25,13 @@ const Animals = () => {
             setDisplayValueId(id);
         }
     };
-
-        const filteredAnimals = animals.filter(animal => animal.name.toLowerCase().includes(input.toLowerCase()));
-
+    
+    // const filteredAnimals = animals.filter(animal => animal.id.toLowerCase().includes(input.toLowerCase()));
+    const filteredAnimals = animals.filter(animal => 
+        animal.Engleza.toLowerCase().includes(input.toLowerCase()) || 
+        animal.Romana.toLowerCase().includes(input.toLowerCase())
+    );
+    
     return (
  <>
     <div className="animals-background"> 
@@ -39,8 +44,8 @@ const Animals = () => {
                 {filteredAnimals.map((animal) => (
                     <div className="display1" key={animal.id} onClick={() => toggleDisplayValue(animal.id)}>
                         <div className="displayDown1">
-                            {animal.name}
-                            {displayValueId === animal.id && <div className='displayDownValue1'>{animal.value}</div>}
+                            {animal.Engleza}
+                            {displayValueId === animal.id && <div className='displayDownValue1'>{animal.Romana}</div>}
                         </div>
                         <img  src={animal.img} alt="" className="displayUp" />                    
                     </div>

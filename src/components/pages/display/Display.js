@@ -4,7 +4,7 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import db from '../../../firebaseDb';
 
 const useFirestore = (collectionName) => {
-    const [documents, setDocuments] = useState([{name: "Loading...", id: "initial", img:'Loading...'}]);
+    const [documents, setDocuments] = useState([{Engleza: "Loading...", id: "initial", img:'Loading...'}]);
     
     useEffect(() => {
         const collectionRef = collection(db, collectionName);

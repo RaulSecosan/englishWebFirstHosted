@@ -29,14 +29,8 @@ function App() {
           path="/learn/exercise/:databaseSelected"
           element={<JustWords />}
         />
-        <Route
-          path="/presentForIub"
-          element={<Present />}
-        />
-        <Route
-          path="/someMath"
-          element={<SomeMath />}
-        />
+        <Route path="/presentForIub" element={<Present />} />
+        <Route path="/someMath" element={<SomeMath />} />
       </Routes>
     </BrowserRouter>
   );
